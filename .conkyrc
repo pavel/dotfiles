@@ -1,0 +1,26 @@
+double_buffer yes
+own_window  yes
+own_window_transparent no
+own_window_type desktop
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager 
+draw_borders no
+draw_graph_borders yes
+border_width 1
+border_inner_margin 3
+draw_shades no
+gap_x 0
+gap_y 4
+alignment top_middle
+update_interval 1
+default_color B7CE42
+own_window_colour 131D24
+use_xft yes
+xftfont Ubuntu Mono:size=10
+
+override_utf8_locale yes
+
+use_spacer none
+minimum_size 1920 0
+
+TEXT
+${alignc}Desktop: ${color ddeedd}${desktop_name}${color}  Date: ${color ddeedd}${time %d/%m/%y}${color}  Time: ${color ddeedd}${time %H:%M:%S}${color}  Uptime: ${color ddeedd}${uptime_short}${color}  Cpu: ${color ddeedd}${cpu}%${color}  Ram: ${color ddeedd}${memfree}${color}
