@@ -1,11 +1,20 @@
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'digitaltoad/vim-jade'
+Plug 'wavded/vim-stylus'
+
+call plug#end()
+
 syntax on
 filetype plugin indent on
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set rtp+=~/.fzf
+set tabstop=4
+set shiftwidth=4
 set laststatus=2
-color beauty256
+color github
 let g:airline_powerline_fonts=1
 let g:airline_theme="sol"
 function! AirlineInit()
@@ -17,3 +26,6 @@ function! AirlineInit()
   let g:airline_section_z = airline#section#create_right(["%l", "%c"])
 endfunction
 autocmd VimEnter * call AirlineInit()
+
+nnoremap <C-p> :FZF<CR>
+
