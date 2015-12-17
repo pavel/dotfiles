@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'digitaltoad/vim-jade'
@@ -28,4 +29,4 @@ endfunction
 autocmd VimEnter * call AirlineInit()
 
 nnoremap <C-p> :FZF<CR>
-
+nnoremap <C-t> :Ag<CR>
