@@ -23,4 +23,4 @@ use_spacer none
 minimum_size 1920 0
 
 TEXT
-${alignc}Desktop: ${color ddeedd}${desktop_name}${color}  Date: ${color ddeedd}${time %d/%m/%y}${color}  Time: ${color ddeedd}${time %H:%M:%S}${color}  Uptime: ${color ddeedd}${uptime_short}${color}  Cpu: ${color ddeedd}${cpu}%${color}  Ram: ${color ddeedd}${memfree}${color}
+${alignc}Desktop: ${color ddeedd}${desktop_name}${color}  Date: ${color ddeedd}${time %d/%m/%y}${color}  Time: ${color ddeedd}${time %H:%M:%S}${color}  Uptime: ${color ddeedd}${uptime_short}${color}  Cpu: ${color ddeedd}${cpu}%${color}  Ram: ${color ddeedd}${memfree}${color}  Net usage: ${color ddeedd}${exec net-used}${color}
