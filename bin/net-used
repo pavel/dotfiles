@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+vnstat -q | head -n 5 | grep total | cut -d ":" -f4 | tr -d " "
