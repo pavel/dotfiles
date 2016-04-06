@@ -2,7 +2,7 @@ double_buffer yes
 own_window  yes
 own_window_transparent no
 own_window_type desktop
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager 
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager
 draw_borders no
 draw_graph_borders yes
 border_width 1
@@ -12,10 +12,10 @@ gap_x 0
 gap_y 4
 alignment top_middle
 update_interval 1
-default_color B7CE42
-own_window_colour 131D24
+default_color 9e9e9e
+own_window_colour eeeeee
 use_xft yes
-xftfont Ubuntu Mono:size=10
+xftfont Source Code Pro for Powerline:medium:size=9
 
 override_utf8_locale yes
 
@@ -23,4 +23,10 @@ use_spacer none
 minimum_size 1920 0
 
 TEXT
-${alignc}Desktop: ${color ddeedd}${desktop_name}${color}  Date: ${color ddeedd}${time %d/%m/%y}${color}  Time: ${color ddeedd}${time %H:%M:%S}${color}  Uptime: ${color ddeedd}${uptime_short}${color}  Cpu: ${color ddeedd}${cpu}%${color}  Ram: ${color ddeedd}${memfree}${color}  Net usage: ${color ddeedd}${exec net-used}${color}
+${alignc}Desktop: ${color 424242}${desktop_name}${color}\
+  Date: ${color 424242}${time %d/%m/%y}${color}\
+  Time: ${color 424242}${time %H:%M:%S}${color}\
+  Uptime: ${color 424242}${uptime_short}${color}\
+  Cpu: ${color 424242}${cpu}%${color}\
+  Ram: ${color 424242}${memfree}${color}\
+  Net usage: ${color 424242}${exec net-used}${color}
