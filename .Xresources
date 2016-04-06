@@ -1,4 +1,20 @@
 URxvt.scrollBar: false
-URxvt.font: xft:Inconsolata for Powerline:size=12
-URxvt.boldFont: xft:Inconsolata for Powerline:size=13
+URxvt.font: xft:Source Code Pro for Powerline:size=12
+URxvt.boldFont: xft:Source Code Pro for Powerline:size=13
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+! Use extended color scheme
+rofi.color-enabled:                  true
+! Color scheme for normal row
+rofi.color-normal:                   #ffffff,#525d76,#f5f5f5,#5294e2,#ffffff
+! Color scheme for urgent row
+rofi.color-urgent:                   #ffffff,#dc322f,#f5f5f5,#5294e2,#dc322f
+! Color scheme for active row
+rofi.color-active:                   #ffffff,#c2cad0,#f5f5f5,#5294e2,#c2cad0
+! Color scheme window
+rofi.color-window:                   #ffffff,#f5f5f5
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid
 
