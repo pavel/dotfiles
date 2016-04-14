@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+wipe() {
+	local file=$1
+	size=$(stat -c%s ${file})
+	head -c $size /dev/urandom > ${file}
+	sync
+	rm -f ${file}
+}
+
+file=$1
+if [ -z $file ]; then
+	echo "Usage:"
+	echo "$0 <file>"
+	exit 2
+fi
+
+read -p "Do you really want to wipe ${file}? " choice
+case "$choice" in
+	y|Y ) wipe $file;;
+	* ) exit 1;;
+esac
+
