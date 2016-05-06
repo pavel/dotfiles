@@ -1,5 +1,5 @@
 xrdb ~/.Xresources &
 sh ~/.fehbg &
-conky &
+panel &
 sxhkd &
 exec bspwm

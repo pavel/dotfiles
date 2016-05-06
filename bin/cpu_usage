@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+sample() {
+	stat=($(cat /proc/stat | grep "cpu " | sed "s/cpu  //" | tr " " "\n"))
+	user=${stat[0]}
+	nice=${stat[1]}
+	system=${stat[2]}
+	idle=${stat[3]}
+	echo -e "$(($user + $nice + $system + $idle))\n$idle"
+}
+
+s1=($(sample))
+sleep 0.2
+s2=($(sample))
+delta=$((${s1[0]} - ${s2[0]}))
+delta_idle=$((${s1[1]} - ${s2[1]}))
+usage=$((100 * ($delta - $delta_idle) / ($delta)))
+echo $usage

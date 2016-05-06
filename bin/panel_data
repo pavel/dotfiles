@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+Desktop=$(bspc query -D -d focused)
+Date=$(date +%m/%d/%y)
+Time=$(date +%H:%M:%S)
+Cpu=$(printf "%03d%%" $(cpu_usage) | sed "s/^\(0\{1,2\}\)/%{F#9e9e9e}\1%{F#424242}/g")
+NetUsed=$(net-used)
+Ram=$(free -h | sed -n "2p" | sed "s/Mem: *//" | awk '{print $3}')
+Uptime() {
+	secs=$(cat /proc/uptime | sed "s/\..\+\$//")
+	printf '%dh %dm\n' $(($secs/3600)) $(($secs%3600/60))
+}
+
+cat << EOM
+%{c}Desktop: %{F#424242}${Desktop}%{F-}\
+  Date: %{F#424242}${Date}%{F-}\
+  Time: %{F#424242}${Time}%{F-}\
+  Uptime: %{F#424242}$(Uptime)%{F-}\
+  Cpu: %{F#424242}${Cpu}%{F-}\
+  Ram: %{F#424242}${Ram}%{F-}\
+  Net usage: %{F#424242}${NetUsed}%{F-}
+EOM
