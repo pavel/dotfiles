@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-rsync -av --progress ./ ~/ --exclude .git --exclude install
+rsync -auv --progress ./ ~/ --exclude .git --exclude install --exclude README.md

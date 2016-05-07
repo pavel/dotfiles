@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	lxterminal --command="env TERM=xterm-256color /usr/bin/fish"
+	lxterminal --command="env TERM=xterm-256color $SHELL"
 
 # program launcher
 super + space
