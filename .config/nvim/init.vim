@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'digitaltoad/vim-jade'
 Plug 'wavded/vim-stylus'
+Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 
@@ -30,5 +31,9 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 
-nnoremap <C-p> :FZF<CR>
-nnoremap <C-t> :Ag<CR>
+let mapleader="\<SPACE>"
+nnoremap <Leader>p :FZF<CR>
+nnoremap <Leader>t :Ag<CR>
+nnoremap <Leader>chi :noh<CR>
+nnoremap <Leader>cnum :set nu!<CR>
+nnoremap <Leader>num :set nu<CR>
