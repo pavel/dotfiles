@@ -30,7 +30,7 @@ hi Identifier		ctermfg=NONE	ctermbg=NONE	cterm=bold
 hi Constant			ctermfg=NONE	ctermbg=NONE	cterm=NONE
 hi Statement		ctermfg=NONE	ctermbg=NONE	cterm=bold
 hi Keyword			ctermfg=NONE	ctermbg=NONE	cterm=bold
-hi Type				ctermfg=248		ctermbg=NONE	cterm=bold
+hi Type				ctermfg=60		ctermbg=NONE	cterm=bold
 hi MatchParen		ctermfg=NONE	ctermbg=254		cterm=NONE
 hi LineNr			ctermfg=248		ctermbg=NONE	cterm=NONE
 hi CursorLineNr		ctermfg=60		ctermbg=NONE	cterm=bold
