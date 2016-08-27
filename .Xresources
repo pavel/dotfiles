@@ -1,6 +1,9 @@
-URxvt.scrollBar: false
-URxvt.font: xft:Source Code Pro for Powerline:size=12
-URxvt.boldFont: xft:Source Code Pro for Powerline:size=13
+! Font styling
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
