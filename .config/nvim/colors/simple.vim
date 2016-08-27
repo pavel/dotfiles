@@ -53,3 +53,4 @@ hi PmenuSbar		ctermfg=NONE	ctermbg=254		cterm=NONE
 hi PmenuThumb		ctermfg=NONE	ctermbg=245		cterm=NONE
 hi StatusLine		ctermfg=NONE	ctermbg=254		cterm=NONE
 hi WildMenu			ctermfg=NONE	ctermbg=254		cterm=bold,underline
+hi Directory		ctermfg=60		ctermbg=NONE	cterm=bold
