@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-Desktop=$(bspc query -T -d focused | grep -Po 'name":"\K[^'"]+')
+Desktop=$(bspc query -T -d focused | grep -Po 'name":"\K[^"]+')
 Date=$(date +%m/%d/%y)
 Time=$(date +%H:%M:%S)
 Cpu=$(printf "%03d%%" $(cpu_usage) | sed "s/^\(0\{1,2\}\)/%{F#9e9e9e}\1%{F#424242}/g")
