@@ -1,6 +1,10 @@
 #!/usr/bin/bash
 
-stat=$(vnstat -q | head -n 5)
+stat=$(vnstat -q | grep "total:")
+
+if [ -z "$stat" ]; then
+	stat=$(vnstat -q)
+fi
 
 if [[ $stat == *"Not enough data"* ]]; then
 	echo ...
@@ -10,4 +14,4 @@ elif [[ $stat == *"No database found"* ]]; then
 	exit 0
 fi
 
-echo $stat | cut -d ":" -f7 | tr -d " "
+echo $stat | cut -d ":" -f4 | tr -d " "
