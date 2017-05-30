@@ -37,6 +37,7 @@ let g:lightline = {
 	\ }
 
 let mapleader="\<SPACE>"
+nnoremap <Leader> <Nop>
 nnoremap <Leader>p :FZF<CR>
 nnoremap <Leader>t :Ag<CR>
 nnoremap <Leader>hi :noh<CR>
