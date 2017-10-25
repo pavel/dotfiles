@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+options=(
+	browse # just open browser
+	skype
+)
+
+opt=$1
+
+if [ "$opt" == "" ]; then
+	opts=$(printf "%s\n" "${options[@]}")
+	opt=$(echo -e "$opts" | rofi -dmenu)
+fi
+
+if [ "$opt" == "" ]; then
+	exit 0
+fi
+
+app=""
+if [ "$opt" == "skype" ]; then
+	app=https://web.skype.com
+fi
+
+if [ "$app" != "" ]; then
+	chromium --incognito --app=$app
+else
+	chromium --incognito
+fi
