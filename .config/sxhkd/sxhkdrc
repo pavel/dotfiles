@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + space
-	rofi -show run -font "Source Code Pro for Powerline 10"
+	rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape

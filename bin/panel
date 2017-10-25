@@ -2,7 +2,7 @@
 
 BG="#eeeeee"
 FG="#9e9e9e"
-FONT="Source Code Pro for Powerline:medium:size=9"
+FONT=$(xrdb -query  | grep "dotfiles.panel-font" | cut -f2-)
 
 tmp=$(mktemp -d)
 fifo=${tmp}/fifo
