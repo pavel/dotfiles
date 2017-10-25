@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+picture=$(find ~/Pictures/Screenlock/ -type f -name "*.png" | shuf -n 1)
+i3lock -f -t -i $picture
