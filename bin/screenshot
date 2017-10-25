@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+area_args="-s -c 1,0,0,0.6 -p 4 --nokeyboard"
+
+if [ "$1" == "whole-screen" ]; then
+	area_args=""
+fi
+
+mkdir -p ~/Pictures/Screenshot
+maim $area_args ~/Pictures/Screenshot/$(date +%F-%T).png
