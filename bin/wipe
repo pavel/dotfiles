@@ -2,20 +2,20 @@
 
 wipe() {
 	local file=$1
-	size=$(stat -c%s ${file})
-	head -c $size /dev/urandom > ${file}
+	size=$(stat -c%s "$file")
+	head -c $size /dev/urandom > "$file"
 	sync
-	rm -f ${file}
+	rm -f "$file"
 }
 
 file=$1
-if [ -z $file ]; then
+if [ ! -f "$file" ]; then
 	echo "Usage:"
 	echo "$0 <file>"
 	exit 2
 fi
 
-read -p "Do you really want to wipe ${file}? " choice
+read -p "Do you really want to wipe ${file} (y/n)? " choice
 case "$choice" in
 	y|Y ) wipe $file;;
 	* ) exit 1;;
