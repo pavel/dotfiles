@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+stat_file=/tmp/wallpaper.current
+
+if [ "$1" == "new" ]; then
+	find ~/Pictures/Wallpaper -type f | shuf -n 1 > $stat_file
+	cat $stat_file | xargs feh --bg-fill --no-fehbg
+	exit $?
+fi
+
+if [ "$1" == "status" ]; then
+	current=$(cat $stat_file 2> /dev/null)
+	echo "Current wallpaper: ${current}"
+fi

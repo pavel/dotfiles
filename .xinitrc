@@ -1,5 +1,5 @@
 xrdb ~/.Xresources &
-sh ~/.fehbg &
+wallpaper new &
 panel &
 sxhkd &
 exec bspwm
