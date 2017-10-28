@@ -1,4 +1,4 @@
-xrdb ~/.Xresources &
+xrdb ~/.Xresources
 wallpaper new &
 panel &
 sxhkd &
