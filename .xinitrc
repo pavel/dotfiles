@@ -1,4 +1,4 @@
-xrdb ~/.Xresources
+[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
 wallpaper next &
 panel &
 sxhkd &
