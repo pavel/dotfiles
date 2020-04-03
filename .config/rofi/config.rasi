@@ -8,5 +8,5 @@ configuration {
 	show-match: false;
 	separator-style: "solid";
 	hide-scrollbar: true;
-	theme: "~/.config/rofi/nord";
+	theme: "nord";
 }
