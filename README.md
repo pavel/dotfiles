@@ -6,3 +6,7 @@ Linux dotfiles
 
 * [Photo by TomTookIt from Pexels](https://www.pexels.com/photo/snow-covered-mountain-facing-body-of-water-under-heavy-clouds-3538721/)
 * [Photo by Luis Ruiz from Pexels](https://www.pexels.com/photo/photo-of-grey-mountain-991422/)
+
+### Inspirations
+
+* [Nord v2 by Lokesh Krishna](https://github.com/lokesh-krishna/dotfiles)
