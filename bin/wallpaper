@@ -1,14 +1,28 @@
 #!/usr/bin/env bash
 
-stat_file=/tmp/wallpaper.current
+stat_file=/tmp/wallpaper.current.$UID
 
-if [ "$1" == "new" ]; then
-	find ~/Pictures/Wallpaper -type f | shuf -n 1 > $stat_file
-	cat $stat_file | xargs feh --bg-fill --no-fehbg
+if [ ! -f "$stat_file" ]; then
+	install -m 600 /dev/null $stat_file
+fi
+
+current() {
+	echo $(cat $stat_file 2> /dev/null)
+}
+
+next() {
+	local current_name=$(basename -- "$(current)")
+	local next=$(find ~/Pictures/Wallpaper -type f ! -name "$current_name" | shuf -n 1)
+	echo -e "$next" > $stat_file
+	feh --bg-fill --no-fehbg "$next"
+}
+
+if [ "$1" == "next" ]; then
+	next
 	exit $?
 fi
 
 if [ "$1" == "status" ]; then
-	current=$(cat $stat_file 2> /dev/null)
-	echo "Current wallpaper: ${current}"
+	echo "Current wallpaper: $(current)"
+	exit $?
 fi
