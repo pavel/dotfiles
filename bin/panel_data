@@ -12,11 +12,11 @@ Uptime() {
 }
 
 cat << EOM
-%{c}Desktop: %{F#424242}${Desktop}%{F-}\
-  Date: %{F#424242}${Date}%{F-}\
-  Time: %{F#424242}${Time}%{F-}\
-  Uptime: %{F#424242}$(Uptime)%{F-}\
-  Cpu: %{F#424242}${Cpu}%{F-}\
-  Ram: %{F#424242}${Ram}%{F-}\
-  Net usage: %{F#424242}${NetUsed}%{F-}
+%{c}%{F#757575}Desktop:%{F-} ${Desktop}\
+  %{F#757575}Date:%{F-} ${Date}\
+  %{F#757575}Time:%{F-} ${Time}\
+  %{F#757575}Uptime:%{F-} $(Uptime)\
+  %{F#757575}Cpu:%{F-} ${Cpu}\
+  %{F#757575}Ram:%{F-} ${Ram}\
+  %{F#757575}Net usage:%{F-} ${NetUsed}
 EOM

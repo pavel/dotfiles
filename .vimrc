@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'arcticicestudio/nord-vim'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
@@ -21,10 +23,10 @@ set shiftwidth=4
 set laststatus=2
 set clipboard+=unnamedplus
 set backupcopy=yes
-color simple
+color nord
 
 let g:lightline = {
-	\ 'colorscheme': 'one',
+	\ 'colorscheme': 'nord',
 	\ 'active': {
 	\   'left': [ [ 'mode', 'paste' ],
 	\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]

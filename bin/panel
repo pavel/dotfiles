@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-BG="#eeeeee"
-FG="#9e9e9e"
+BG="#2E3440"
+FG="#D8DEE9"
 FONT=$(xrdb -query  | grep "dotfiles.panel-font" | cut -f2-)
 
 tmp=$(mktemp -d)
