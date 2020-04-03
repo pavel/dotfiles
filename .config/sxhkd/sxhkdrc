@@ -15,7 +15,10 @@ super + l
 	screenlock
 
 Print
-	screenshot whole-screen
+	screenshot
+
+alt + Print
+	screenshot area
 
 # make sxhkd reload its configuration files:
 super + Escape

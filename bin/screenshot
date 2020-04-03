@@ -1,10 +1,35 @@
 #!/usr/bin/env bash
 
-area_args="-s -c 1,0,0,0.6 -p 4 --nokeyboard"
-
-if [ "$1" == "whole-screen" ]; then
-	area_args=""
+dir=~/Pictures/Screenshot
+if [ ! -d $dir ]; then
+	mkdir -p $dir
 fi
 
-mkdir -p ~/Pictures/Screenshot
-maim $area_args ~/Pictures/Screenshot/$(date +%F-%T).png
+dest() {
+	echo "$dir/$(date +%F-%T).png"
+}
+
+window() {
+	local id=$(xprop -root 32c '\t$0' _NET_ACTIVE_WINDOW | cut -f2)
+	maim -i $id $(dest)
+}
+
+area() {
+	maim -s -c 1,0,0,0.6 -p 4 --nokeyboard $(dest)
+}
+
+screen() {
+	maim $(dest)
+}
+
+if [ "$1" == "window" ]; then
+	window
+	exit $?
+fi
+
+if [ "$1" == "area" ]; then
+	area
+	exit $?
+fi
+
+screen
