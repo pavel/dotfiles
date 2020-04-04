@@ -27,7 +27,7 @@ cleanup() {
 
 trap cleanup INT
 
-cat ${fifo} | lemonbar -g x24 -p -B "${BG}" -F "${FG}" -f "${FONT}" &> /dev/null &
+cat ${fifo} | lemonbar -g x24 -p -B "${BG}" -F "${FG}" -o 1 -f "${FONT}" &> /dev/null &
 stat &
 
 wait

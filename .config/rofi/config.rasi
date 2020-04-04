@@ -4,7 +4,7 @@ configuration {
 	modi: "run";
 	width: 640;
 	lines: 10;
-	font: "Ubuntu Mono derivative Powerline 12";
+	font: "Agave Code 12";
 	show-match: false;
 	separator-style: "solid";
 	hide-scrollbar: true;

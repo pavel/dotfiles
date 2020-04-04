@@ -1,6 +1,6 @@
 ! Custom settings
-dotfiles.font: Ubuntu Mono derivative Powerline
-dotfiles.panel-font: Ubuntu Mono derivative Powerline:medium:size=10
+dotfiles.font: Agave Code
+dotfiles.panel-font: Agave Code:regular:size=9
 
 ! Font styling
 Xft.antialias: 1
