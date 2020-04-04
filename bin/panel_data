@@ -3,7 +3,7 @@
 Desktop=$(bspc query -D -d --names)
 Date=$(date +%m/%d/%y)
 Time=$(date +%H:%M:%S)
-Cpu=$(printf "%03d%%" $(cpu_usage) | sed "s/^\(0\{1,2\}\)/%{F#9e9e9e}\1%{F-}/g")
+Cpu=$(printf "%03d%%" $(cpu_usage) | sed "s/^\(0\{1,2\}\)/%{F#757575}\1%{F-}/g")
 NetUsed=$(net-used)
 Ram=$(free -h | sed -n "2p" | sed "s/Mem: *//" | awk '{print $3}')
 Uptime() {
